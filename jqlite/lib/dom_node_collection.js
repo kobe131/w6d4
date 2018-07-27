@@ -83,16 +83,38 @@ class DOMNodeCollection {
   }
   
   remove(){
-    this.elements.forEach( (el) => {
-      debugger 
-      this.find(el).forEach(child => {
-        child.html(" ");
-        el.removeChild(child);
-      });
-      el.html(" ");
-      el.parentNode.removeChild(el);
-    });
+    this.children().forEach(ele => ele.removeChild(child));
+    this.html(" ");
+    this.parentNode.removeChild(this);
+    // this.elements.forEach(ele => {
+    //    ele.innerHTML = "";
+    //    debugger
+    //    ele.children().forEach(child => {
+    // 
+    //     // this.elements.forEach( (el) => {
+    //     //   debugger 
+    //     //   this.find(el).forEach(child => {
+    //     //     child.html(" ");
+    //     //     el.removeChild(child);
+    //     //   });
+    //     //   el.html(" ");
+    //     //   el.parentNode.removeChild(el);
+    //     // });
+    //   });
+    //   ele.parentNode.removeChild(el);
+    // });
   }
+  
+  on() {
+    
+    
+  }
+  
+  off() {
+    
+  }
+  
+  
   
 }
 module.exports = DOMNodeCollection;
